@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-areas:
+    "header header"
+    "languages certificate"
+    "projects-filter ."
+    "projects projects";
+  gap: 20px;
+}
+
+.background {
+  background-color: rgb(34, 34, 34);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+}
+
+.header-section {
+  grid-area: header;
+  display: flex;
+}
+
+.header-section h1 {
+  font-weight: 500;
+}
+
+.header-section p,
+a {
+  color: #828282;
+}
+
+.header-section img {
+  width: 200px;
+  border-radius: 12px;
+}
+
+.header-section-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+
+/* LANGUAGES */
+
+.languages-section {
+  grid-area: languages;
+}
+
+.languages-section > div {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.languages-section > div p {
+  width: 110px;
+  font-size: 14px;
+}
+
+.skill-container {
+  width: 100%;
+  background-color: rgb(167, 167, 167);
+  border-radius: 25px;
+  height: 10px;
+}
+
+.skills {
+  text-align: right;
+  color: white;
+  background-color: #9e0089;
+  border-radius: 25px;
+  height: 10px;
+}
+
+.html,
+.css,
+.js,
+.react {
+  width: 90%;
+  animation: fill 2s ease;
+}
+
+.next {
+  width: 50%;
+  animation: fill 2s ease;
+}
+
+.redux {
+  width: 60%;
+  animation: fill 2s ease;
+}
+
+/* CERTIFICATES */
+
+.certificate-section {
+  grid-area: certificate;
+}
+
+.certificate-section h2 {
+  font-weight: 500;
+}
+
+/* PROJECTS */
+
+.projects-filter {
+  grid-area: projects-filter;
+}
+
+.projects-filter a {
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+  background-color: #9e0089;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 5px;
+  box-shadow: 0px 4px 10px 0px rgb(0, 0, 0, 0.2);
+}
+
+.projects-filter a:hover {
+  background-color: #810070;
+}
+
+.projects-filter a[is-selected="true"] {
+  background-color: #660058;
+}
+
+.projects-section {
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+/* FOOTER */
+
+footer {
+  width: 100%;
+  margin: 50px 0 10px 0;
+  padding: 10px 0;
+  color: #828282;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: #828282;
+  margin-left: 5px;
+}
